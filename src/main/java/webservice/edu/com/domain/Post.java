@@ -1,13 +1,8 @@
 package webservice.edu.com.domain;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Getter
 @NoArgsConstructor
@@ -15,7 +10,9 @@ import javax.persistence.Id;
 public class Post {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(length = 500 , nullable = false)
     private String title;
+    @Column(columnDefinition = "TEXT", nullable = false)
     private String content;
     private String author;
     @Builder
