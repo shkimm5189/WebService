@@ -29,7 +29,9 @@ dependencies {
     implementation('org.springframework.boot:spring-boot-starter-data-jpa')
     implementation('com.h2database:h2')
 
-    testCompile('org.springframework.boot:spring-boot-starter-test')
-    testCompile("org.springframework.security:spring-security-test")
-    testCompile('junit:junit:4.12')
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
+    testImplementation("org.springframework.security:spring-security-test")
+    testImplementation('junit:junit:4.12')
+    annotationProcessor('org.projectlombok:lombok')
+    testAnnotationProcessor('org.projectlombok:lombok')
 }
