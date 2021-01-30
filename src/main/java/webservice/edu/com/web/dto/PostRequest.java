@@ -17,7 +17,10 @@ public class PostRequest {
         this.content = content;
         this.author = author;
     }
-
+    public PostRequest(String title , String content){
+        this.title = title;
+        this.content = content;
+    }
     public Post toEntity(){
         return Post.builder()
                 .title(title)
@@ -25,4 +28,6 @@ public class PostRequest {
                 .author(author)
                 .build();
     }
+
+
 }
