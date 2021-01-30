@@ -64,6 +64,7 @@ public class PostApiControllerTest {
                 .content("content")
                 .author("author")
                 .build());
+
         Long updateId = savePost.getId();
         String expectedTitle = "changed title";
         String expectedContent = "changed content";

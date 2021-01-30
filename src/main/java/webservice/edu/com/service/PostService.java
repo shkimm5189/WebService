@@ -29,7 +29,10 @@ public class PostService {
                 IllegalArgumentException("해당 게시글 없습니다. id = "+id));
 
         post.update(request.getTitle(), request.getContent());
+        postRepository.save(request.toEntity());
         return id;
+
+        //return postRepository.save()
     }
 
     @Transactional
