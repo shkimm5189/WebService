@@ -32,10 +32,10 @@ public class PostApiControllerTest {
     @Autowired
     private PostRepository postRepository;
 
-    @After
-    public void tearDown() throws Exception{
-        postRepository.deleteAll();
-    }
+   // @After
+//    public void tearDown() throws Exception{
+//        postRepository.deleteAll();
+//    }
 
     @Test
     public void Post_등록하기()throws Exception{

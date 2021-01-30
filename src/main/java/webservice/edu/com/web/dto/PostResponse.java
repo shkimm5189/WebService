@@ -1,7 +1,9 @@
 package webservice.edu.com.web.dto;
 
+import lombok.Getter;
 import webservice.edu.com.domain.Post;
 
+@Getter
 public class PostResponse {
     private Long id ;
     private String title;
