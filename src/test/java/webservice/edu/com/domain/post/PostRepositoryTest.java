@@ -10,6 +10,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import static org.assertj.core.api.Assertions.assertThat;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 
@@ -46,6 +49,21 @@ public class PostRepositoryTest {
         Post post = postList.get(0);
         assertThat(post.getTitle()).isEqualTo(title);
         assertThat(post.getContent()).isEqualTo(content);
+    }
+
+    @Test
+    public void BaseTimeEntity_등록(){
+        //given
+        LocalDateTime now = LocalDateTime.of(2019,6,4,0,0,0);
+        postRepository.save(Post.builder()
+                .title("title")
+                .content("content")
+                .author("성현")
+                .build());
+        //when
+        List<Post> postList = postRepository.findAll();
+        //then
+        Post post = postList.get(0);
     }
 
 }
