@@ -1,7 +1,7 @@
 package webservice.edu.com.web.dto;
 
 import lombok.Getter;
-import webservice.edu.com.domain.Post;
+import webservice.edu.com.domain.post.Post;
 
 @Getter
 public class PostResponse {

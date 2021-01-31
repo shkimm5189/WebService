@@ -1,11 +1,9 @@
 package webservice.edu.com.service;
 
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import webservice.edu.com.domain.Post;
-import webservice.edu.com.domain.PostRepository;
+import webservice.edu.com.domain.post.Post;
+import webservice.edu.com.domain.post.PostRepository;
 import webservice.edu.com.web.dto.PostRequest;
 import webservice.edu.com.web.dto.PostResponse;
 

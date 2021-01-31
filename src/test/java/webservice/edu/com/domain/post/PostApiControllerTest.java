@@ -1,6 +1,5 @@
 package webservice.edu.com.domain.post;
 
-import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,11 +11,8 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
-import webservice.edu.com.domain.Post;
-import webservice.edu.com.domain.PostRepository;
 import webservice.edu.com.web.dto.PostRequest;
 import static org.assertj.core.api.Assertions.assertThat;
-import webservice.edu.com.web.dto.PostResponse;
 
 import java.util.List;
 

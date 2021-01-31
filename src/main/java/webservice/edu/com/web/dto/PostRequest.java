@@ -3,7 +3,7 @@ package webservice.edu.com.web.dto;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import webservice.edu.com.domain.Post;
+import webservice.edu.com.domain.post.Post;
 
 @Getter
 @NoArgsConstructor

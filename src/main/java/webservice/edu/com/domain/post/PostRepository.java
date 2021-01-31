@@ -1,4 +1,4 @@
-package webservice.edu.com.domain;
+package webservice.edu.com.domain.post;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

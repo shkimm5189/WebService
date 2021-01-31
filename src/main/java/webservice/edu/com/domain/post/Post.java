@@ -1,13 +1,14 @@
-package webservice.edu.com.domain;
+package webservice.edu.com.domain.post;
 
 import lombok.*;
+import webservice.edu.com.domain.BaseTimeEntity;
 
 import javax.persistence.*;
 
 @Getter
 @NoArgsConstructor
 @Entity
-public class Post {
+public class Post extends BaseTimeEntity {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(length = 500 , nullable = false)
