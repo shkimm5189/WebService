@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import webservice.edu.com.service.PostService;
 import webservice.edu.com.web.dto.post.PostRequest;
 import webservice.edu.com.web.dto.post.PostResponse;
+import webservice.edu.com.web.dto.post.PostUpdateRequest;
 
 @RequiredArgsConstructor
 @RestController
@@ -18,7 +19,7 @@ public class PostApiController {
     }
 
     @PutMapping("/api/post/{id}")
-    public Long Update(@PathVariable Long id, @RequestBody PostRequest updateRequest){
+    public Long Update(@PathVariable Long id, @RequestBody PostUpdateRequest updateRequest){
         return postService.update(id,updateRequest);
     }
 
