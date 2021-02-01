@@ -4,8 +4,8 @@ package webservice.edu.com.web.controller;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import webservice.edu.com.service.PostService;
-import webservice.edu.com.web.dto.PostRequest;
-import webservice.edu.com.web.dto.PostResponse;
+import webservice.edu.com.web.dto.post.PostRequest;
+import webservice.edu.com.web.dto.post.PostResponse;
 
 @RequiredArgsConstructor
 @RestController

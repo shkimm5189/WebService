@@ -11,7 +11,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
-import webservice.edu.com.web.dto.PostRequest;
+import webservice.edu.com.web.dto.post.PostRequest;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.List;
