@@ -25,3 +25,4 @@ var main = {
         });
     }
 };
+main.init();
