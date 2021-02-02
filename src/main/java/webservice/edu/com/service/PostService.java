@@ -26,7 +26,7 @@ public class PostService {
         return postRepository.save(request.toEntity()).getId();
     }
 
-    @Transactional(readOnly = true)
+    @Transactional
     public Long update(Long id, PostUpdateRequest request){
         Post post = postRepository.findById(id).orElseThrow(() -> new
                 IllegalArgumentException("해당 게시글 없습니다. id = "+id));
@@ -35,7 +35,7 @@ public class PostService {
         return id;
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public PostResponse findById(Long id){
         Post entity = postRepository.findById(id).orElseThrow(() -> new
                 IllegalArgumentException("해당 게시글 없습니다. id + "+id));

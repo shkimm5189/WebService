@@ -1,5 +1,6 @@
 package webservice.edu.com.domain.post;
 
+import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,10 +31,10 @@ public class PostApiControllerTest {
     @Autowired
     private PostRepository postRepository;
 
-   // @After
-//    public void tearDown() throws Exception{
-//        postRepository.deleteAll();
-//    }
+    @After
+    public void tearDown() throws Exception{
+        postRepository.deleteAll();
+    }
 
     @Test
     public void Post_등록하기()throws Exception{
