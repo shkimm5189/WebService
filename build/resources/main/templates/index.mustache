@@ -22,15 +22,15 @@
     <tbody id ="tbody">
     <!-- mustache 문법 -->
     {{#post}}
-        <tr><a href="/api/post/{{id}}"> </a>
+        <tr>
             <td>{{id}}</td>
-            <td>{{title}}</td>
+            <td><a href="/api/update/{{id}}">{{title}}</a></td>
             <td>{{author}}</td>
             <td>{{updateDate}}</td>
+
         </tr>
     {{/post}}
     </tbody>
 </table>
 </div>
 {{>layout/footer}}
-<script src="/js/app/post-save.js"></script>

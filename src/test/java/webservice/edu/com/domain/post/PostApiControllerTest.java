@@ -12,6 +12,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 import webservice.edu.com.web.dto.post.PostRequest;
+import webservice.edu.com.web.dto.post.PostUpdateRequest;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.List;
@@ -65,13 +67,13 @@ public class PostApiControllerTest {
         String expectedTitle = "changed title";
         String expectedContent = "changed content";
 
-        PostRequest request = PostRequest.builder()
+        PostUpdateRequest request = PostUpdateRequest.builder()
                 .title(expectedTitle)
                 .content(expectedContent)
                 .build();
         String url = "http://localhost:" + port+"/api/post/"+updateId;
 
-        HttpEntity<PostRequest> requestEntity = new HttpEntity<>(request);
+        HttpEntity<PostUpdateRequest> requestEntity = new HttpEntity<>(request);
 
         //when
     ResponseEntity<Long> responseEntity = restTemplate.exchange(url, HttpMethod.PUT,requestEntity,Long.class);

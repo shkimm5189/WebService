@@ -25,7 +25,7 @@ public class IndexController {
         return "post-save";
     }
     
-    @GetMapping("/api/post/{id}")
+    @GetMapping("/api/update/{id}")
     public String postUpdate(@PathVariable Long id,Model model){
         PostResponse response = postService.findById(id);
         model.addAttribute("post",response);
