@@ -1,9 +1,10 @@
 var main = {
     init : function (){
         var _this = this;
-        $('btn-save').on('click',function (){
+        $('#btn-save').on('click',function (){
             _this.save();
         });
+
     },
     save : function (){
         var data = {
@@ -13,7 +14,7 @@ var main = {
         };
         $.ajax({
             type:'POST',
-            url: '/post/save',
+            url: '/api/post',
             dataType:'json',
             contentType:'application/json; charset=utf-8',
             data:JSON.stringify(data)

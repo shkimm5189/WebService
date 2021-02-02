@@ -4,7 +4,7 @@
 <div class = "col-md-12">
     <div class ="row">
         <div class = "col-md-6">
-            <a href = "/post/save" role="button" class = "btn btn-primary">글 등록</a>
+            <a href = "/api/post" role="button" class = "btn btn-primary">글 등록</a>
         </div>
     </div>
 
@@ -20,6 +20,7 @@
     </tr>
     </thead>
     <tbody id ="tbody">
+    <!-- mustache 문법 -->
     {{#post}}
         <tr>
             <td>{{id}}</td>
