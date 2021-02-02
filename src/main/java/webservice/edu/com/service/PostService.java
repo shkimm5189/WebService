@@ -33,8 +33,6 @@ public class PostService {
 
         post.update(request.getTitle(),request.getContent());
         return id;
-
-
     }
 
     @Transactional
@@ -43,6 +41,7 @@ public class PostService {
                 IllegalArgumentException("해당 게시글 없습니다. id + "+id));
         return new PostResponse(entity);
     }
+
     @Transactional(readOnly =true)
     public List<PostListResponse> findAllDesc(){
         return postRepository.findAllDesc().stream()
